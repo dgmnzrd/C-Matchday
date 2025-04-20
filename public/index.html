@@ -2,16 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>C‑Matchday</title>
+    <title>C‑Matchday - Marcadores de Futbol</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Bienvenido a C‑Matchday</h1>
-    <form id="loginForm">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Contraseña">
-        <button type="submit">Login</button>
-    </form>
+    <header>
+        <h1>C‑Matchday</h1>
+        <nav>
+            <button onclick="location.href='login'">Login</button>
+            <button onclick="location.href='register'">Register</button>
+        </nav>
+    </header>
+    <main>
+        <section id="scores">
+            <h2>Marcadores de Futbol</h2>
+            <!-- Aquí se mostrarán los marcadores -->
+        </section>
+    </main>
     <script src="js/app.js"></script>
 </body>
 </html>

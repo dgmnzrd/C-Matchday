@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/mbedtls/lib/pkgconfig:$PKG_CONFIG_PATH"
 set -e
 
@@ -7,4 +7,5 @@ mkdir -p build
 cd build
 cmake ..
 make
-./cmatchday
+cd ..                # <— volvemos al root
+./build/cmatchday 
