@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>C‑Matchday - Marcadores de Futbol</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>C‑Matchday – Marcadores de Fútbol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind + tus estilos propios -->
+    <link href="css/tailwind.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>C‑Matchday</h1>
-        <nav>
-            <button onclick="location.href='login'">Login</button>
-            <button onclick="location.href='register'">Register</button>
-        </nav>
+
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center space-x-2">
+                <!-- Aquí podría ir tu logo -->
+                <span class="text-2xl font-extrabold text-purple-700">C‑Matchday</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="/login" class="text-gray-600 hover:text-purple-700 font-medium transition">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/register" class="text-gray-600 hover:text-purple-700 font-medium transition">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section id="scores">
-            <h2>Marcadores de Futbol</h2>
-            <!-- Aquí se mostrarán los marcadores -->
-        </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-8">
+
+        <!-- Aquí se inyecta el selector de ligas -->
+        <!-- Insertado por index.js -->
+
+        <h2 class="text-3xl font-bold text-purple-700 mb-6">Marcadores de Fútbol</h2>
+
+        <!-- Contenedor de tarjetas de partidos -->
+        <div id="matches" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Se inyectan desde index.js -->
+        </div>
     </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
     <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
