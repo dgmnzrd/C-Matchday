@@ -1,0 +1,4 @@
+build/
+config/firebase_config.json
+*.o
+*.exe
